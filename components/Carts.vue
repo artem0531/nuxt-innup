@@ -6,7 +6,6 @@
     const cartStore = useCartStore();
 </script>
 <template>
-    <NavbarTop />
     <div class="bg-gray-100 h-screen py-8">
         <div class="container mx-auto px-4">
             <h1 class="text-2xl font-semibold mb-4">Shopping Cart</h1>
@@ -19,9 +18,9 @@
                                     <th class="text-left font-semibold">Product</th>
                                     <th class="text-left font-semibold">Description</th>
                                     <th class="text-left font-semibold"></th>
-                                    <th class="text-left font-semibold">Price</th>
-                                    <th class="text-left font-semibold">Quantity</th>
-                                    <th class="text-left font-semibold">Total</th>
+                                    <th class="text-center font-semibold">Price</th>
+                                    <th class="text-center font-semibold">Quantity</th>
+                                    <th class="text-center font-semibold">Total</th>
                                     <th class="text-left font-semibold"></th>
                                 </tr>
                             </thead>
@@ -65,6 +64,5 @@
             </div>
         </div>
     </div>
-    <PageBottom />
 </template>
 <style></style>

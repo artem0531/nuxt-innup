@@ -1,4 +1,5 @@
 <script setup>
+    import { SfRating, SfCounter, SfLink } from '@storefront-ui/vue';
     defineProps({
         product: { type: Object, required: true },
         count: { type: Number, required: true },
@@ -16,20 +17,23 @@
             {{ product.subname }}
         </td>
         <td class="py-4">
-            
+            <SfRating size="xs" :value="product.stars" :max="5" />
+
+            <SfLink href="#" variant="secondary" class="pl-1 no-underline">
+            </SfLink>
         </td>
-        <td class="py-4">
+        <td class="py-4 text-center">
             {{ product.price }}€<br>
         </td>
         <td class="py-4">
-            <div class="flex items-center">
+            <div class="flex items-center justify-center">
                 <button class="border rounded-md py-2 px-4 mr-2" @click="$emit('clearOneItem')">-</button>
                 <span class="text-center w-8">{{ count }}</span>
                 <button class="border rounded-md py-2 px-4 ml-2" @click="$emit('addOneItem')">+</button>
             </div>
         </td>
-        <td class="py-4">
-            {{ (count * product.price).toFixed(2) }}€<br>
+        <td class="py-4 text-center">
+            {{ (count * product.price).toFixed(2) }}€
         </td>
         <td>
             <div @click="$emit('clear')">

@@ -1,5 +1,4 @@
 <template>
-    <NavbarTop/>
     <div class="mx-auto bg-gray-100 p-1 sm:p-10 w-4/5">
       <div class="flex flex-col items-center pb-8">
         <h1 class="typography-headline-1 text-center">TOLLE Produkte</h1>
@@ -25,7 +24,6 @@
     </div>
     
     <Footer class="mx-auto bg-gray-100 p-1 sm:p-10 w-4/5"/>
-    <PageBottom/>
   </template>
   
   <script lang="ts" setup>

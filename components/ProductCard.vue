@@ -21,7 +21,10 @@
       </SfButton>
     </div>
     <div class="p-4 border-t border-neutral-200">
-      <SfLink href="#" variant="secondary" class="no-underline"> {{ product.name }} </SfLink>
+      <div class="w-full flex justify-between">
+        <SfLink href="#" variant="secondary" class="no-underline"> {{ product.name }} </SfLink>
+        <Tooltip>{{ product.nameTip }}</Tooltip>
+      </div>
       <div class="flex items-center pt-1">
         <SfRating size="xs" :value="5" :max="5" />
 
@@ -29,9 +32,12 @@
           <SfCounter size="xs">{{ product.stars }}</SfCounter>
         </SfLink>
       </div>
-      <p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-700">
-        {{ product.subname }}
-      </p>
+      <div class="w-full flex justify-between">
+        <p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-700">
+          {{ product.subname }}
+        </p>
+        <Tooltip>{{ product.subnameTip }}</Tooltip>
+      </div>
       <span class="block pb-2 font-bold typography-text-lg">${{ product.price }}</span>
       <SfButton 
         size="sm"
@@ -49,6 +55,7 @@
 <script lang="ts" setup>
 import { SfRating, SfCounter, SfLink, SfButton, SfIconShoppingCart, SfIconFavorite } from '@storefront-ui/vue';
 import { defineProps } from 'vue';
+import Tooltip from './Tooltip.vue';
 
 const cartStore = useCartStore();
 
