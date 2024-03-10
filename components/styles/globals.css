@@ -1,0 +1,27 @@
+/* src/styles/globals.css */
+@tailwind base;
+
+@layer utilities {
+    .typography-headline-1
+    {
+      color: #00519F; /* or use your primary color */
+    }
+
+    .typography-headline-2,
+    .typography-headline-3,
+    .typography-text-lg,
+    .text-neutral
+    {
+      color: #dd8000; 
+    }
+
+    .text-white
+    {
+      color: #ffffff; 
+    }
+
+  };
+
+
+@tailwind components;
+@tailwind utilities;
